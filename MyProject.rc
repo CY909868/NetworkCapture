@@ -70,6 +70,7 @@ END
 // remains consistent on all systems.
 IDR_MAINFRAME           ICON                    "res\\MyProject.ico"
 
+
 /////////////////////////////////////////////////////////////////////////////
 //
 // Dialog
@@ -81,24 +82,24 @@ CAPTION "关于 MyProject"
 FONT 9, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,14,14,20,20
-    LTEXT           "MyProject，1.0 版",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "NetworkCapture版权所有",IDC_STATIC,42,14,114,8,SS_NOPREFIX
     LTEXT           "Copyright (C) 2024",IDC_STATIC,42,26,114,8
     DEFPUSHBUTTON   "确定",IDOK,113,41,50,14,WS_GROUP
 END
 
-IDD_MYPROJECT_DIALOG DIALOGEX 0, 0, 430, 288
+IDD_MYPROJECT_DIALOG DIALOGEX 0, 0, 431, 288
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 EXSTYLE WS_EX_APPWINDOW
 CAPTION "ICMP数据包抓取与分析"
 FONT 9, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
-    CONTROL         "",IDC_LIST_DATA,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,69,416,212
-    PUSHBUTTON      "开始抓包",IDC_BTN_START,108,39,55,20
-    PUSHBUTTON      "停止抓包",IDC_BTN_STOP,182,39,55,20
-    GROUPBOX        "",IDC_STATIC,7,4,416,64,0,WS_EX_DLGMODALFRAME
-    LTEXT           "网卡设备：",IDC_STATIC,45,22,40,8
-    COMBOBOX        IDC_COMBO_DEVICES,87,19,285,165,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
-    PUSHBUTTON      "退出",IDCANCEL,256,39,55,20
+    CONTROL         "",IDC_LIST_DATA,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,159,69,265,212
+    PUSHBUTTON      "开始抓包",IDC_BTN_START,7,151,55,20
+    PUSHBUTTON      "停止抓包",IDC_BTN_STOP,105,152,55,20
+    GROUPBOX        "",IDC_STATIC,7,4,417,64,0,WS_EX_DLGMODALFRAME
+    LTEXT           "网卡设备：",IDC_STATIC,7,94,40,8
+    COMBOBOX        IDC_COMBO_DEVICES,7,120,152,165,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "退出",IDCANCEL,54,183,55,20
 END
 
 
@@ -160,7 +161,7 @@ BEGIN
     IDD_MYPROJECT_DIALOG, DIALOG
     BEGIN
         LEFTMARGIN, 7
-        RIGHTMARGIN, 423
+        RIGHTMARGIN, 424
         TOPMARGIN, 7
         BOTTOMMARGIN, 281
     END
@@ -170,12 +171,28 @@ END
 
 /////////////////////////////////////////////////////////////////////////////
 //
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_MYPROJECT_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
 // String Table
 //
 
 STRINGTABLE
 BEGIN
-    IDS_ABOUTBOX            "关于 MyProject(&A)..."
+    IDS_ABOUTBOX            "关于 NetworkCapture(&A)..."
 END
 
 #endif    // 中文(简体，中国) resources
